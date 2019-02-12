@@ -3,6 +3,7 @@ package com.android.ivorita.viewslide;
 import android.animation.ObjectAnimator;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.AnimationUtils;
 
 public class ViewSlideActivity extends AppCompatActivity {
@@ -22,6 +23,10 @@ public class ViewSlideActivity extends AppCompatActivity {
 
         //使用属性动画使View滑动
         //不仅可以执行动画，还可以改变View的位置参数
-        ObjectAnimator.ofFloat(customView,"translationX",0,300).setDuration(1000).start();
+        //ObjectAnimator.ofFloat(customView,"translationX",0,300).setDuration(1000).start();
+
+        //使用Scroll来进行平滑移动
+        customView.smoothScrollTo(-400,0);
+
     }
 }
